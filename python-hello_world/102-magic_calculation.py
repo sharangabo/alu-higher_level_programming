@@ -1,12 +1,5 @@
 #!/usr/bin/python3
-  3           0 LOAD_CONST               1 (98)
 
-                3 LOAD_FAST                0 (a)
+def magic_calculation(a, b):
 
-                              6 LOAD_FAST                1 (b)
-
-                                            9 BINARY_POWER
-
-                                                         10 BINARY_ADD
-
-                                                                      11 RETURN_VALUE
+        return(98 + a ** b)
