@@ -12,5 +12,5 @@ if __name__ == "__main__":
         for arg in argv[1:]:
             print("{}: {}".format(values, arg))
             values += 1
-   else:
-       print("{} arguments.".format(num_of_args))
+    elif:
+        print("{} arguments.".format(num_of_args))
