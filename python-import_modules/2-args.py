@@ -2,15 +2,13 @@
 from sys import argv
 
 if __name__ == "__main__":
-    num_of_args = len(argv) - 1
-    if num_of_args > 0:
-        if num_of_args == 1:
-            print("{} argument:".format(num_of_args))
-        else:
-            print("{} arguments:".format(num_of_args))
-        values = 1
-        for arg in argv[1:]:
-            print("{}: {}".format(values, arg))
-            values += 1
-    elif:
-        print("{} arguments.".format(num_of_args))
+    length = len(argv) - 1
+    if length == 0:
+        print("{}".format("0 arguments."))
+    elif length == 1:
+        print("{}".format("1 argument:"))
+        print("1: {}".format(argv[1]))
+    else:
+        print("{:d} {}".format(length, "arguments:"))
+        for i in range(1, length + 1):
+            print("{:d}: {}".format(i, argv[i]))
