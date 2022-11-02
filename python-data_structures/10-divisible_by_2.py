@@ -5,4 +5,4 @@ def divisible_by_2(my_list=[]):
         if i % 2 == 0:
             x.append(True)
         else:
-            x.append(false)
+            x.append(False)
