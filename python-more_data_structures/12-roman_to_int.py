@@ -9,5 +9,5 @@ def roman_to_int(roman_string):
             int_sum += converter[current]
         else:
             int_sum -= converter[current]
-        int_sum += converter[roman_string[-1]]
-        return int_sum
+    int_sum += converter[roman_string[-1]]
+    return int_sum
