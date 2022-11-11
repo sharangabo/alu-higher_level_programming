@@ -81,7 +81,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
-        
+
         rect = []
         for i in range(self.__height):
             [rect.append(str(self.print_symbol)) for j in range(self.__width)]
@@ -99,4 +99,3 @@ class Rectangle:
         """Print a message for every deletion of a Rectangle."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
