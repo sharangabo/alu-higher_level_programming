@@ -1,25 +1,17 @@
 #!/usr/bin/python3
-# class 'Square' that inherits from 'Rectangle' (9-rectangle.py)
-# (task based on 10-square.py)
-"""
-    define a Rectangle subclass 'Square'
-"""
-
+"""Inherit from RQectangle"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-"""
-    representation of 'Square'
-"""
-
+    """Initialize the subclass"""
     def __init__(self, size):
-    """
-        Initialize a new 'Square'
-        Args:
-            size (int): size of the new square
-    """
-
-        `self.integer_validator("size", size)
+        """call the integer validator method"""
+        self.integer_validator("size", size)
+        """call the parent class methods and attributes"""
         super().__init__(size, size)
         self.__size = size
+
+    """Create the user string represantation"""
+    def __str__(self):
+        return str("[Square] {}/{}".format(self.__size, self.__size))
