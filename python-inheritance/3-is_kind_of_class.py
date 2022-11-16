@@ -3,6 +3,6 @@
 
 
 def is_kind_of_class(obj, a_class):
-    '''Another documentation for the method'''
+    '''Check if the object is an instance of a class'''
 
      return isinstance(obj, a_class)
