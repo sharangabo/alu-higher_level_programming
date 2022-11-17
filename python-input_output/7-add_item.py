@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''adds all arguments to a python list and then saves them to a file:'''
+'''adds all arguments to a python list, and then save them to a file'''
 
 
 import sys
@@ -14,7 +14,7 @@ if _name_ == "_main_":
     except FileNotFoundError:
         loadFile = []
 
-    argc = len(sys.argv)
-    for idx in range(1, argc):
-        loadFile.append(sys.argv[idx])
-    save_to_json_file(loadFile, "add_item.json")
+    arg = len(sys.argv)
+    for i in range(1, arg):
+        loadfile.append(sys.argv[i])
+    save_to_json_file(loadfile, "add_item.json")
