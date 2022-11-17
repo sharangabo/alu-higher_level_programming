@@ -18,7 +18,7 @@ class Student:
         '''returns a dict rep of the data'''
         context = {
             'first_name': self.first_name,
-            'last_name':self.last_name,
+            'last_name': self.last_name,
             'age': self.age
         }
         if attrs is None or type(attrs) != list:
