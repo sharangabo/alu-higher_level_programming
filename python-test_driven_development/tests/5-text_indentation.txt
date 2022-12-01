@@ -17,7 +17,7 @@ John
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation("Aptech. School")
-Aptech.
+>>> text_indentation("Holberton. School")
+Holberton.
 <BLANKLINE>
 School
