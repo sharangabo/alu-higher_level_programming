@@ -53,8 +53,26 @@ class Rectangle(Base):
         self.__height = value
 
     @property
+    def x(self):
+        """Get the x attr."""
+
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """set the value of x"""
+
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+
+        if value < 0:
+            raise ValueError("x must be >= 0")
+
+        self.__x = value
+
+    @property
     def y(self):
-       """Get the y attr."""
+        """Get the y attr."""
 
         return self.__y
 
@@ -69,6 +87,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
         self.__y = value
+
     def area(self):
         """calc the area of a rectangle."""
 
@@ -103,7 +122,8 @@ class Rectangle(Base):
         elif len(kwargs) != 0:
 
             self.id = kwargs["id"] if "id" in kwargs else self.id
-            self.width = kwargs["width"] if "width" in kwargs else \                self.width
+            self.width = kwargs["width"] if "width" in kwargs else \
+                self.width
             self.height = kwargs["height"] if "height" in kwargs else \
                 self.height
             self.x = kwargs["x"] if "x" in kwargs else self.x
