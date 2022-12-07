@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#/usr/bin/python3
 """Create a new class."""
 
 import json
@@ -47,3 +47,31 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns instance with all attr already set.by creating a dummy."""
+
+        if cls.__name__ == "Square":
+            dummy = cls(4)
+        if cls.__name__ == "Rectangle":
+            dummy = cls(4, 2)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of loaded instances."""
+
+        filename = cls.__name__ + ".json"
+
+        try:
+            with open(filename, "r") as my_file:
+                handle = my_file.read()
+        except FileNotFoundError:
+                   return []
+        handle_load = cls.from_json_string(handle)
+        my_list = []
+        for object_dict in handle_load:
+            my_list.append(cls.create(**object_dict))
+        return my_list
